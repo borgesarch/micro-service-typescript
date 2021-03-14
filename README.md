@@ -37,13 +37,15 @@ $ docker-compose up --build
 
 * Hexagonal architecture
 * Bounded Contexts
-* JWT / OAUTH2
+* JWT
 * Automatic Routes Injectors
 * Automatic Entitiy Mapping
 * Schedule Jobs injectors
 * Notification Pattern
 * Object-oriented programming
 * Globalization (i18n)
+* Event Source - KAFKA
+* Migrations
 
 ### Autor ###
 
