@@ -1,0 +1,16 @@
+{
+  "entity":"Entity",
+  "entity.validator":"Contract validator ok",
+  "user.entity": "Usuário",
+  "user.error.notfound": "User not found!",
+  "user.contract":"Erro ao tentar estabelecer contrato com a entidade usuário",
+  "user.name":"Nome",
+  "user.name.error.isnotnull":"Nome não pode ser nulo!",
+  "user.email":"E-mail",
+  "user.email.error.isnotnull":"E-mail não pode ser nulo!",
+  "user.email.error.isinuse":"E-mail em uso!",
+  "user.password.name":"Senha",
+  "user.password.error.invalid":"Senha informada não valida!",
+  "alc.modules.error.notfound":"O módulo informado não existe!",
+  "contact.entity.error.notfound":"O contato solicitado não existe!"
+}

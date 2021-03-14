@@ -1,0 +1,30 @@
+version: "3.1"
+ 
+services:
+  ms-container-db:
+    image: 'postgres:13.1-alpine'
+    restart: always
+    ports:
+      - "5432:5432"
+    container_name: ms-container-db
+    environment:
+      - POSTGRES_USER=compose-postgres
+      - POSTGRES_PASSWORD=compose-postgres
+    volumes: 
+      - /var/lib/postgresql/data
+
+  ms-container-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ms-container-api
+    depends_on:
+      - ms-container-db
+    volumes:
+      - ./src:/app-core/src
+    ports:
+      - "5555:5555"
+    env_file: 
+      - .env
+    
+  

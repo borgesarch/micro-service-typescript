@@ -1,0 +1,20 @@
+{
+	"user.entity": "Usuário",
+	"user.contract": "User contract error, check your fields!",
+	"user.name": "Nome",
+	"user.name.error.isnotnull": "Name is not null",
+	"user.error.notfound": "User not found!",
+	"user.email": "E-mail",
+	"user.email.error.isnotnull": "E-mail is not null!",
+	"user.email.error.isinuse": "E-mail in use!",
+	"user.password.name": "password",
+	"user.password.error.invalid": "Invalid password!",
+	"user.email.isnotnull": "user.email.isnotnull",
+	"user.password": "user.password",
+	"entity": "Entity",
+	"entity.validator": "Contract validator ok",
+	"person.error.notfound": "person.error.notfound",
+  "user.email.error.invalid": "user.email.error.invalid",
+  "alc.modules.error.notfound":"O módulo informado não existe!",
+  "contact.entity.error.notfound":"O contato solicitado não existe!"
+}

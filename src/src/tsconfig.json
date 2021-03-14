@@ -1,0 +1,48 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "types": [
+      "node",
+      "jest",
+      "mocha"
+    ],
+    "baseUrl": "./",
+    "lib": ["es5", "es6", "ES2018"],
+    "outDir": "build",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "target": "ES2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "declaration": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "stripInternal": true,
+    "pretty": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@services/*": ["./src/application/*"],
+      "@controllers/*": ["src/presentation/controllers/*"],
+      "@presentation/*":["src/presentation/*"],
+      "@core/*": ["./src/domain/*"],
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "tmp",
+    "temp",
+    "build",
+    "node_modules"
+  ]
+}
