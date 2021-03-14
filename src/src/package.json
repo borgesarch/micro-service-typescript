@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "private": "true",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "ms:build": "./node_modules/.bin/babel ./src --extensions \".js,.ts\" --out-dir build --copy-files --no-copy-ignored",
     "ms:start": "node build/index.js",

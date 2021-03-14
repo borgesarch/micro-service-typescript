@@ -1,7 +1,11 @@
-# MICRO-SERVICE #
+# SIMPLE TYPESCRIPT MICRO SERVICE #
 
 
-[![License](https://img.shields.io/badge/License-UNLISENCED-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Typescript-4.1.2-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/TypeORM-0.2.28-orange.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Typescript-4.1.2-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/TypeORM-0.2.28-orange.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/KafkaJS-1.15.0-purple.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Hapi-latest-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
+
+
+
+
 
 # #
 
@@ -15,9 +19,9 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 
 ### Base do conhecimento ###
 
-* [Manual de uso](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
-* [Política de privacidade](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
-* [Padrões e boas práticas](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
+* [Manual de uso](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
+* [Política de privacidade](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
+* [Padrões e boas práticas](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
 
 
 ### Inicio rápido
@@ -25,7 +29,7 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 Em seu terminal execute:
 
 ```sh
-    $ docker-compose up --build
+$ docker-compose up --build
 ```
 
 
@@ -33,13 +37,15 @@ Em seu terminal execute:
 
 * Hexagonal architecture
 * Bounded Contexts
-* JWT / OAUTH2
+* JWT
 * Automatic Routes Injectors
 * Automatic Entitiy Mapping
 * Schedule Jobs injectors
 * Notification Pattern
 * Object-oriented programming
 * Globalization (i18n)
+* Event Source - KAFKA
+* Migrations
 
 ### Autor ###
 
