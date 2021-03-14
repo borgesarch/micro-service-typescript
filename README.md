@@ -15,9 +15,9 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 
 ### Base do conhecimento ###
 
-* [Manual de uso](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
-* [Política de privacidade](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
-* [Padrões e boas práticas](https://bitbucket.org/blueone-eng/blueone-ms-default/src/master/src/README.md)
+* [Manual de uso](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
+* [Política de privacidade](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
+* [Padrões e boas práticas](https://github.com/borgesdeveloper/micro-service-typescript/tree/master/docs)
 
 
 ### Inicio rápido
