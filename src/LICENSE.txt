@@ -1,0 +1,29 @@
+Copyright (c) 2020-2021 COFFEE DIGITAL
+Todos os direitos reservados.
+
+Redistribuição e uso nas formas de origem e binária, com ou sem
+modificação, são permitidas desde que as seguintes condições sejam atendidas:
+
+  * As redistribuições do código-fonte devem manter os direitos autorais acima
+    observe, esta lista de condições e a seguinte isenção de responsabilidade.
+  * As redistribuições na forma binária devem reproduzir os direitos autorais acima
+    aviso, esta lista de condições e a seguinte isenção de responsabilidade em
+    a documentação e / ou outros materiais fornecidos com o
+    distribuição.
+  * Nem o nome do padrão nem os nomes de seus
+    contribuidores podem ser usados ​​para endossar ou promover produtos
+    derivado deste software sem prévio escrito específico
+    permissão.
+
+ESTE SOFTWARE É FORNECIDO PELOS PROPRIETÁRIOS DE DIREITOS AUTORAIS E CONTRIBUIDORES
+"COMO ESTÁ" E QUAISQUER GARANTIAS EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO
+LIMITADO ÀS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO
+PARA UM DETERMINADO PROPÓSITO SÃO RENUNCIADOS. EM NENHUMA HIPÓTESE O
+O PROPRIETÁRIO DOS DIREITOS AUTORAIS OU CONTRIBUIDORES SÃO RESPONSÁVEIS POR QUALQUER DIRETO, INDIRETO,
+DANOS INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQUENCIAIS (INCLUINDO,
+MAS NÃO SE LIMITANDO À COMPRA DE BENS OU SERVIÇOS DE SUBSTITUIÇÃO;
+PERDA DE USO, DADOS OU LUCROS; OU INTERRUPÇÃO DE NEGÓCIOS) NO ENTANTO
+CAUSADA E SOBRE QUALQUER TEORIA DE RESPONSABILIDADE, SEJA EM CONTRATO, ESTRITA
+RESPONSABILIDADE OU DELITO (INCLUINDO NEGLIGÊNCIA OU OUTRO) DECORRENTE DE
+QUALQUER FORMA DE USO DESTE SOFTWARE, MESMO SE AVISADO DO
+POSSIBILIDADE DE TAIS DANOS.
