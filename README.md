@@ -25,7 +25,7 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 Em seu terminal execute:
 
 ```sh
-    $ docker-compose up --build
+$ docker-compose up --build
 ```
 
 
