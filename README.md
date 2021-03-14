@@ -1,7 +1,7 @@
 # SIMPLE TYPESCRIPT MICRO SERVICE #
 
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Typescript-4.1.2-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/TypeORM-0.2.28-orange.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/KafkaJS-1.15.0-pink.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Hapi-latest-purple.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Typescript-4.1.2-blue.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/TypeORM-0.2.28-orange.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/KafkaJS-1.15.0-purple.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) [![License](https://img.shields.io/badge/Hapi-latest-silver.svg?style=flat)](https://github.com/clips/pattern/blob/master/LICENSE.txt) 
 
 
 
