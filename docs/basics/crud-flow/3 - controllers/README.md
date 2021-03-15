@@ -35,7 +35,7 @@ Resultado:
 ```
 
 
-### 3° - Implemente a interface IBaseController: ###
+### 2° - Implemente a interface IBaseController: ###
 
 Resultado:
 
@@ -71,7 +71,7 @@ Resultado:
 
 ```
 
-### 4° - Adicione os decoradores: ###
+### 3° - Adicione os decoradores: ###
 
 Mapeadores disponíveis:
 
