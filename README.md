@@ -44,7 +44,7 @@ $ npm run ms:watch
 
 * Hexagonal architecture
 * Bounded Contexts
-* JWT
+* JWT / OAUTH2(optional)
 * Automatic Routes Injectors
 * Moular Plugins HTTP
 * Automatic Entity Mapping
@@ -64,5 +64,4 @@ $ npm run ms:watch
 ### Autor ###
 
 * Gabriel Borges - Arquiteto de Software
-
 
