@@ -55,11 +55,14 @@ $ npm run ms:watch
 * Event Source - KAFKA
 * Migrations
 * Docker
+* Domain-Driven Design
 * Generic Repository
 * Middleware Injectors
 * TsLint
 * Babel Compiler
 * EsLint
+* Unit Test(Jest)
+
 
 ### Autor ###
 
