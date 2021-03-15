@@ -28,10 +28,17 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 
 Em seu terminal execute:
 
+Docker:
+
 ```sh
 $ docker-compose up --build
 ```
 
+Node:
+
+```sh
+$ npm run ms:watch
+```
 
 ### Features
 
@@ -39,13 +46,20 @@ $ docker-compose up --build
 * Bounded Contexts
 * JWT
 * Automatic Routes Injectors
-* Automatic Entitiy Mapping
+* Moular Plugins HTTP
+* Automatic Entity Mapping
 * Schedule Jobs injectors
 * Notification Pattern
 * Object-oriented programming
 * Globalization (i18n)
 * Event Source - KAFKA
 * Migrations
+* Docker
+* Generic Repository
+* Middleware Injectors
+* TsLint
+* Babel Compiler
+* EsLint
 
 ### Autor ###
 
