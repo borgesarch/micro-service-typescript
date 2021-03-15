@@ -1,2 +1,4 @@
 import glob from 'glob'
-export default glob.sync(`${__dirname}/middlewares/**/*.ts`)
+import path from 'path'
+
+export default glob.sync(path.join(__dirname, '/middlewares/**/*.ts'))

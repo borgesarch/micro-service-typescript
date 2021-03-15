@@ -10,7 +10,9 @@ import controllers from 'src/presentation/index'
 import { container } from 'tsyringe'
 import * as dotenv from 'dotenv'
 import { kafkaConnector } from '@infrastructure/events/kafka/connector'
-import { userConsumer } from '@infrastructure/events/kafka/consumers/user-consumer'
+import middleware from '@infrastructure/http/middleware'
+import consumers from '@infrastructure/events/kafka'
+
 dotenv.config()
 
 export default class Ioc {
@@ -113,12 +115,32 @@ export default class Ioc {
     *                                               *
     *                                               *
     * * * * * * * * * * * * * * * * * * * * * * * */
-    const kafkaConnetor = await kafkaConnector()
-    await userConsumer(kafkaConnetor) // disable if not use KAFKA
+    if (process.env.KAFKA_ENABLED === 'true') {
+      await kafkaConnector().then(async (kafka) =>
+        consumers.forEach(async (consumer:any) => await import(consumer)
+          .then(async (consum) => await consum.default(kafka))),
+      )
+    }
+  }
+
+  /* * * * * * * * * * * * * * * * * * * * * * * *
+  *                                               *
+  *                                               *
+  *                                               *
+  *              MIDDLEWARE INJECTION             *
+  *                                               *
+  *                                               *
+  *                                               *
+  * * * * * * * * * * * * * * * * * * * * * * * */
+  async resolveMiddlewares (server: any) {
+    middleware.forEach(async (middleware) => await import(middleware)
+      .then(async (mid) => await mid.default(server)))
   }
 
   async resolveRoutes () {
     await initServer().then(async (server:any) => {
+      await this.resolveMiddlewares(server)
+
       controllers.forEach(async (controller: any) => {
         await import(controller).then(async (control) => {
           await registerRoutes(server, control.default)

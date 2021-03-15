@@ -2,11 +2,11 @@ import { User } from '@core/business/users/user-model'
 import { UserService } from '@services/side/user/user-service'
 import { container } from 'tsyringe'
 
-export const userConsumer = async (kafka : any) => {
+export default async (kafka : any) => {
   const userService = container.resolve<UserService>('IUserService')
 
   const consumer = kafka.consumer({ groupId: 'user-group' })
-  const producer = kafka.producer({ groupId: 'user-group' })
+  const producer = kafka.producer()
 
   await consumer.connect()
   await consumer.subscribe({ topic: 'user-topic', fromBeginning: true })
