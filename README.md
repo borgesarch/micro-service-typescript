@@ -12,7 +12,7 @@
 
 ### Sobre ###
 
-O projeto foi desenvolvido e idealizado por Gabriel Borges.
+Microserviço projeto para pequenas empresas que deseja expandir e escalar seus negócios digitais.
 
 # #
 
