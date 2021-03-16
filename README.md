@@ -46,7 +46,7 @@ $ npm run ms:watch
 * Bounded Contexts
 * JWT / OAUTH2(optional)
 * Automatic Routes Injectors
-* Moular Plugins HTTP
+* Modular Plugins HTTP
 * Automatic Entity Mapping
 * Schedule Jobs injectors
 * Notification Pattern
