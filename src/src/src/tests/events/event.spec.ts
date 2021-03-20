@@ -15,8 +15,13 @@ describe('Event source connection', () => {
     const producer = kafka.producer()
     await producer.connect()
     await producer.send({
-      topic: 'user-create-response',
-      messages: [{ value: JSON.stringify({ message: 'Oi' }) }],
+      topic: 'user-create',
+      messages: [{
+        value: JSON.stringify({
+          email: 'gabrielborges.web@gmail.com',
+          password: '123',
+        }),
+      }],
     })
 
     await producer.disconnect()

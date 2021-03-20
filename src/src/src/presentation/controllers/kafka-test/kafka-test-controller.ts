@@ -16,7 +16,7 @@ export default class KafkaTestController {
   public async create (request : Request, http: ResponseToolkit) {
     try {
       const kafka = new Kafka({
-        clientId: 'ms-request',
+        clientId: new Date().toISOString(),
         brokers: ['localhost:9092'],
         logLevel: logLevel.WARN,
         retry: {
@@ -34,17 +34,7 @@ export default class KafkaTestController {
         ],
       })
 
-      producer.connect()
-      const consumer = kafka.consumer({ groupId: 'user-group-send' })
-      await consumer.connect()
-      await consumer.subscribe({ topic: 'user-create-response' })
-      await consumer.run({
-        eachMessage: async ({ topic, partition, message }:{ topic:any, partition:any, message:any}) => {
-          console.table(await JSON.parse(message.value))
-        },
-      })
-
-      return await http.response({ success: true, data: request.payload as any })
+      return await http.response({ success: true, data: { date: new Date().toISOString(), ...(request.payload as any) } })
     } catch (error) {
       console.log(error)
       return await http.response({ success: false, error: error }).code(400)
