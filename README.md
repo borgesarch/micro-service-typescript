@@ -12,7 +12,7 @@
 
 ### Sobre ###
 
-O projeto foi desenvolvido e idealizado por Gabriel Borges.
+Microserviço projeto para pequenas empresas que deseja expandir e escalar seus negócios digitais.
 
 # #
 
@@ -28,27 +28,43 @@ O projeto foi desenvolvido e idealizado por Gabriel Borges.
 
 Em seu terminal execute:
 
+Docker:
+
 ```sh
 $ docker-compose up --build
 ```
 
+Node:
+
+```sh
+$ npm run ms:watch
+```
 
 ### Features
 
 * Hexagonal architecture
 * Bounded Contexts
-* JWT
+* JWT / OAUTH2(optional)
 * Automatic Routes Injectors
-* Automatic Entitiy Mapping
+* Modular Plugins HTTP
+* Automatic Entity Mapping
 * Schedule Jobs injectors
 * Notification Pattern
 * Object-oriented programming
 * Globalization (i18n)
 * Event Source - KAFKA
 * Migrations
+* Docker
+* Domain-Driven Design
+* Generic Repository
+* Middleware Injectors
+* TsLint
+* Babel Compiler
+* EsLint
+* Unit Test(Jest)
+
 
 ### Autor ###
 
 * Gabriel Borges - Arquiteto de Software
-
 
