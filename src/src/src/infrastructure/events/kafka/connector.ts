@@ -1,6 +1,11 @@
-const { Kafka } = require('kafkajs')
+import { Kafka, logLevel } from 'kafkajs'
 
-export const kafkaConnector = async () => await new Kafka({
+export const kafkaConnector = () => new Kafka({
   clientId: 'ms-user',
-  brokers: ['kafka1:9092', 'kafka2:9092'],
+  brokers: ['localhost:9092'],
+  logLevel: logLevel.WARN,
+  retry: {
+    initialRetryTime: 300,
+    retries: 10,
+  },
 })

@@ -44,7 +44,7 @@ export default class UserController implements IBaseController {
   @getMapping({
     path: '{skip}/{take}',
     options: {
-      auth: 'authjwt',
+      auth: false,
     },
   })
   public async getAllPaginated (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {

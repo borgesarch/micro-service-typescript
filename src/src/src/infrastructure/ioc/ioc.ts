@@ -12,6 +12,7 @@ import * as dotenv from 'dotenv'
 import { kafkaConnector } from '@infrastructure/events/kafka/connector'
 import middleware from '@infrastructure/http/middleware'
 import consumers from '@infrastructure/events/kafka'
+import { Kafka } from 'kafkajs'
 
 dotenv.config()
 
@@ -115,11 +116,11 @@ export default class Ioc {
     *                                               *
     *                                               *
     * * * * * * * * * * * * * * * * * * * * * * * */
+
     if (process.env.KAFKA_ENABLED === 'true') {
-      await kafkaConnector().then(async (kafka) =>
-        consumers.forEach(async (consumer:any) => await import(consumer)
-          .then(async (consum) => await consum.default(kafka))),
-      )
+      const kafka = await kafkaConnector()
+      consumers.forEach(async (consumer:any) => await import(consumer)
+        .then(async (consum) => await consum.default(kafka)))
     }
   }
 
