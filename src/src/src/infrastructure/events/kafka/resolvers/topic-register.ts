@@ -12,6 +12,7 @@ const registerTopic = async (kafka:Kafka, controller:any) => {
       if (topics) {
         topics.forEach(async (topic) => {
           if (topic) {
+            console.log(topic)
             const consumer = kafka.consumer({ groupId: topic.group })
             await consumer.connect()
             await consumer.subscribe({ topic: topic.topic })

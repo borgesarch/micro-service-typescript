@@ -11,6 +11,18 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: localhost
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "user-create:1:1,user-create-response:1:1"
+      KAFKA_CREATE_TOPICS: "user-create:1:1, user-create-response:1:1"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+
+  magic:
+    image: "digitsy/kafka-magic"
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/config
+    environment:
+      KMAGIC_ALLOW_TOPIC_DELETE: "true"
+      KMAGIC_CONFIG_STORE_TYPE: "file"
+      KMAGIC_CONFIG_STORE_CONNECTION: "Data Source=/config/KafkaMagicConfig.db;"
+      KMAGIC_CONFIG_ENCRYPTION_KEY: "ENTER_YOUR_KEY_HERE"

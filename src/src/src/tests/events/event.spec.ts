@@ -4,7 +4,7 @@ import 'reflect-metadata'
 describe('Event source connection', () => {
   beforeAll(async function () {
     const kafka = new Kafka({
-      clientId: 'ms-user',
+      clientId: 'user',
       brokers: ['localhost:9092'],
       logLevel: logLevel.WARN,
       retry: {
@@ -19,6 +19,16 @@ describe('Event source connection', () => {
       messages: [{
         value: JSON.stringify({
           email: 'gabrielborges.web@gmail.com',
+          password: '123',
+        }),
+      }],
+    })
+
+    await producer.send({
+      topic: 'user-update',
+      messages: [{
+        value: JSON.stringify({
+          email: 'borgesdeveloper@outlook.com',
           password: '123',
         }),
       }],

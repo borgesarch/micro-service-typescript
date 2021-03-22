@@ -16,7 +16,7 @@ export default class KafkaTestController {
   public async create (request : Request, http: ResponseToolkit) {
     try {
       const kafka = new Kafka({
-        clientId: new Date().toISOString(),
+        clientId: 'api',
         brokers: ['localhost:9092'],
         logLevel: logLevel.WARN,
         retry: {
