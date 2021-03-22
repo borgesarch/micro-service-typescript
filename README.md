@@ -67,4 +67,5 @@ $ npm run ms:watch
 ### Autor ###
 
 * Gabriel Borges - Arquiteto de Software
+* gabrielborges.web@gmail.com
 
