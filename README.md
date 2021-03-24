@@ -100,4 +100,5 @@ Crie topicos rapidamente com kafkaController:
 ### Autor ###
 
 * Gabriel Borges - Arquiteto de Software
+* gabrielborges.web@gmail.com
 
