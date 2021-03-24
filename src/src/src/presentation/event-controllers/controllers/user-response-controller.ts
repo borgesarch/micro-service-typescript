@@ -6,7 +6,7 @@ import { injectable } from 'tsyringe'
 
 @injectable()
 @kafkaController('users-response')
-export default class EventResponseController implements IControllerKafka {
+export default class UserResponseEventController implements IControllerKafka {
   @kafkaTopic({
     topic: 'user-update-response',
     group: 'user-update',
@@ -19,7 +19,6 @@ export default class EventResponseController implements IControllerKafka {
       ...await JSON.parse((message as any).value),
       date: new Date().toISOString(),
     }
-    console.log(result)
   }
 
   @kafkaTopic({
@@ -35,5 +34,15 @@ export default class EventResponseController implements IControllerKafka {
       date: new Date().toISOString(),
     }
     console.log(result)
+  }
+
+  @kafkaTopic({
+    topic: 'user-get-response',
+    group: 'user-group-get-response',
+    partitions: 1,
+  })
+  async findAll (kafka: Kafka, payload: EachMessagePayload): Promise<void> {
+    const { message } = payload
+    console.log('USER-GET: ', await JSON.parse((message as any).value))
   }
 }

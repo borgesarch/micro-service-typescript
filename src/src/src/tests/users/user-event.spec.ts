@@ -20,16 +20,19 @@ describe('Event source connection', () => {
         value: JSON.stringify({
           email: 'gabrielborges.web@gmail.com',
           password: '123',
+          organization_id: '1',
+          active: true,
         }),
       }],
     })
 
     await producer.send({
-      topic: 'user-update',
+      topic: 'user-get',
       messages: [{
         value: JSON.stringify({
-          email: 'borgesdeveloper@outlook.com',
-          password: '123',
+          skip: 1,
+          take: 20,
+          organization_id: 1,
         }),
       }],
     })
@@ -40,7 +43,7 @@ describe('Event source connection', () => {
   afterAll(async function () {
   })
 
-  it('should be connected to database', async () => {
+  it('Kafka test completed it succesful', async () => {
     expect(true).toBeTruthy()
   })
 })

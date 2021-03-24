@@ -40,6 +40,39 @@ Node:
 $ npm run ms:watch
 ```
 
+### Kafka Controller
+
+
+Crie topicos rapidamente com kafkaController:
+```typescript
+
+    // tornando seu controlador auto-injetável
+    @injectable() 
+    @kafkaController()
+    export default class TodoController implements IBaseController {
+    @kafkaTopic({
+        topic: 'user-create',     // definindo seu topico
+        group: 'user-group-send', // definindo seu grupo
+        partitions: 1, // quantidade de partições
+    })
+    async create (kafka: Kafka, payload: EachMessagePayload): Promise<void> {
+        const { message, topic } = payload
+        const result = await JSON.parse((message as any).value)
+        const producer = kafka.producer() 
+        
+        //respondendo o evento ao consumidor
+        await producer.connect()
+        await producer.send({
+            topic: 'user-create-response',
+            compression: CompressionTypes.GZIP,
+            messages: [{ value: JSON.stringify(result) }],
+        })
+    }
+}
+
+```
+
+
 ### Features
 
 * Hexagonal architecture

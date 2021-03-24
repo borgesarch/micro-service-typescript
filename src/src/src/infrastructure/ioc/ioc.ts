@@ -11,7 +11,6 @@ import { container } from 'tsyringe'
 import * as dotenv from 'dotenv'
 import { kafkaConnector } from '@infrastructure/events/kafka/connector'
 import middleware from '@infrastructure/http/middleware'
-import consumers from '@infrastructure/events/kafka'
 import kafkaControllers from '@presentation/event-controllers/index'
 import registerTopic from '@infrastructure/events/kafka/resolvers/topic-register'
 dotenv.config()
@@ -124,8 +123,6 @@ export default class Ioc {
           await registerTopic(kafka, control.default)
         })
       })
-      consumers.forEach(async (consumer:any) => await import(consumer)
-        .then(async (consum) => await consum.default(kafka)))
     }
   }
 
