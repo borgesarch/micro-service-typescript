@@ -15,6 +15,7 @@
     "ms:lint": "eslint . --ext .js --ext .ts --fix"
   },
   "devDependencies": {
+    "sqlite3": "^5.0.2",
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-decorators": "^7.12.1",
@@ -69,13 +70,15 @@
     "i18n": "^0.13.2",
     "jsonwebtoken": "^8.5.1",
     "kafkajs": "^1.15.0",
+    "keycloak-hapi": "^2.2.0",
     "md5-typescript": "^1.0.5",
     "node-cron": "^2.0.3",
     "pg": "^8.4.2",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "tsyringe": "^4.3.0",
-    "typeorm": "^0.2.28"
+    "typeorm": "^0.2.28",
+    "wreck": "^14.2.0"
   },
   "husky": {
     "hooks": {

@@ -26,6 +26,9 @@ export const connector = async () => {
       ...await getConnectionOptions(),
       entities: await models,
     })
+    await repositories.forEach((domain) => {
+      container.registerInstance(domain.name, connection.getRepository(domain.instance))
+    })
   } else {
     connection = await createConnection({
       type: 'sqlite',

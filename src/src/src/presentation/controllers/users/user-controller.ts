@@ -25,7 +25,7 @@ export default class UserController implements IBaseController {
   @getMapping({
     path: '',
     options: {
-      auth: 'authjwt',
+      auth: false,
     },
   })
   public async getAll (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {

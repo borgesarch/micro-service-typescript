@@ -15,9 +15,6 @@ export class User extends Base {
   @Column()
   public email: string
 
-  @Column()
-  public organization_id : string
-
   @IsNotEmpty({
     message: i18n.__('user.password.error.invalid'),
   })
