@@ -17,7 +17,7 @@ const registerRoutes = async (server:any, controller:any) => {
             server.route({
               path: `${Reflect.getMetadata('prefix', controller)}${(route.path !== '' ? `/${route.path}` : '')}`,
               method: route.requestMethod,
-              options: { ...route.options },
+              config: { ...route.config ? route.config : null },
               handler: async (request : Request, http: ResponseToolkit) => await ((await container.resolve(controller.name)) as any)[route.methodName](request, http),
             })
           }

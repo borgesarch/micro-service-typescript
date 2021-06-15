@@ -14,35 +14,19 @@ async function initServer () {
   server.settings.debug = {
     request: ['error'],
   }
-  await server.register(require('@hapi/jwt'))
+ 
+  const authKeycloak = require("hapi-auth-keycloak");
 
-  server.auth.strategy('authjwt', 'jwt', {
+  await server.register({ plugin: authKeycloak });
 
-    keys: process.env.SECRET_KEY as string,
+  server.auth.strategy("keycloak-jwt", "keycloak-jwt", {
+    realmUrl: process.env.REALM_URL,
+    clientId: process.env.CLIENT_ID,
+    minTimeBetweenJwksRequests: 15,
+    cache: false,
+    userInfo: ["name", "email"],
+  });
 
-    verify: {
-      aud: 'audience:security',
-      iss: 'issuer:security',
-      sub: false,
-      nbf: false,
-      exp: true,
-    },
-
-    validate: (token: any, request : Request, http: ResponseToolkit) => {
-      const result = {} as any
-
-      if (!token.token) {
-        result.isValid = false
-        return result
-      }
-
-      result.isValid = true
-      result.payload = token.decoded.payload
-      return result
-    },
-  })
-
-  server.auth.default('authjwt')
   server.start()
   return server
 }

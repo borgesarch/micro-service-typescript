@@ -3,4 +3,5 @@ export interface RouteDefinition {
   requestMethod: 'get' | 'post' | 'delete' | 'options' | 'put';
   methodName: string;
   options : any,
+  config: any,
 }

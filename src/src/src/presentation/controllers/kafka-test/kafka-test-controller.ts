@@ -9,9 +9,8 @@ import { CompressionTypes, Kafka, logLevel } from 'kafkajs'
 export default class KafkaTestController {
   @postMapping({
     path: '',
-    options: {
-      auth: false,
-    },
+    options: {},
+    config: {}
   })
   public async create (request : Request, http: ResponseToolkit) {
     try {

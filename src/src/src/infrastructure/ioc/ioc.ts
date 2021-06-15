@@ -4,7 +4,6 @@ import DataConnection from '@infrastructure/data/connections/data-connection'
 import registerRoutes from '@infrastructure/http/routes/route-register'
 import { connector } from '@infrastructure/data/connector/connector'
 import { UserService } from '@services/side/user/user-service'
-import { AuthService } from '@services/side/auth/auth-service'
 import initServer from '@infrastructure/http/routes/server'
 import controllers from 'src/presentation/index'
 import { container } from 'tsyringe'
@@ -100,7 +99,6 @@ export default class Ioc {
     *                                               *
     * * * * * * * * * * * * * * * * * * * * * * * * */
 
-    container.register('IAuthService', { useClass: AuthService })
     container.register('IDataConnection', { useClass: DataConnection })
     container.register('IUserService', { useClass: UserService })
     container.register('IExternalService', { useClass: ExternalService })

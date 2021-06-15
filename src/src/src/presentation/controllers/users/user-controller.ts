@@ -24,9 +24,22 @@ export default class UserController implements IBaseController {
 
   @getMapping({
     path: '',
-    options: {
-      auth: false,
-    },
+    options:{},
+    config: {
+      description: "protected endpoint",
+      auth: {
+        strategies: ["keycloak-jwt"],
+        access: {
+          scope: [
+            "realm:admin",
+            "editor",
+            "other-resource:creator",
+            "scope:foo.READ",
+            "clientscope:profile",
+          ],
+        },
+      },
+    }
   })
   public async getAll (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {
@@ -43,9 +56,8 @@ export default class UserController implements IBaseController {
 
   @getMapping({
     path: '{skip}/{take}',
-    options: {
-      auth: false,
-    },
+    options: {},
+    config:{}
   })
   public async getAllPaginated (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {
@@ -74,9 +86,8 @@ export default class UserController implements IBaseController {
 
   @getMapping({
     path: '{id}',
-    options: {
-      auth: 'authjwt',
-    },
+    options: {},
+    config:{}
   })
   public async getById (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {
@@ -96,9 +107,8 @@ export default class UserController implements IBaseController {
 
   @postMapping({
     path: '',
-    options: {
-      auth: 'authjwt',
-    },
+    options: {},
+    config:{}
   })
   public async create (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {
@@ -124,9 +134,8 @@ export default class UserController implements IBaseController {
 
   @putMapping({
     path: '',
-    options: {
-      auth: 'authjwt',
-    },
+    options: {},
+    config:{}
   })
   public async update (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {
@@ -154,9 +163,8 @@ export default class UserController implements IBaseController {
 
   @deleteMapping({
     path: '{id}',
-    options: {
-      auth: 'authjwt',
-    },
+    options: {},
+    config:{}
   })
   public async remove (request : Request, http: ResponseToolkit) : Promise<ResponseObject> {
     try {

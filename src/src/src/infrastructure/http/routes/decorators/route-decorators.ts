@@ -1,6 +1,6 @@
 import { RouteDefinition } from './route-definition'
 
-export const getMapping = ({ path, options = null } : { path: string; options: any; }): MethodDecorator => {
+export const getMapping = ({ path, options = {}, config = {} } : { path: string; options: any; config: any }): MethodDecorator => {
   return (target, propertyKey: string): void => {
     if (!Reflect.hasMetadata('routes', target.constructor)) {
       Reflect.defineMetadata('routes', [], target.constructor)
@@ -13,13 +13,14 @@ export const getMapping = ({ path, options = null } : { path: string; options: a
       path,
       methodName: propertyKey,
       options,
+      config,
     })
 
     Reflect.defineMetadata('routes', routes, target.constructor)
   }
 }
 
-export const postMapping = ({ path, options = {} } : { path: string; options: any; }): MethodDecorator => {
+export const postMapping = ({ path, options = {}, config = {} } : { path: string; options: any; config:any }): MethodDecorator => {
   return (target, propertyKey: string): void => {
     if (!Reflect.hasMetadata('routes', target.constructor)) {
       Reflect.defineMetadata('routes', [], target.constructor)
@@ -32,12 +33,13 @@ export const postMapping = ({ path, options = {} } : { path: string; options: an
       path,
       methodName: propertyKey,
       options,
+      config,
     })
     Reflect.defineMetadata('routes', routes, target.constructor)
   }
 }
 
-export const putMapping = ({ path, options = {} } : { path: string; options: any; }): MethodDecorator => {
+export const putMapping = ({ path, options = {}, config = {} } : { path: string; options: any; config:any; }): MethodDecorator => {
   return (target, propertyKey: string): void => {
     if (!Reflect.hasMetadata('routes', target.constructor)) {
       Reflect.defineMetadata('routes', [], target.constructor)
@@ -50,12 +52,13 @@ export const putMapping = ({ path, options = {} } : { path: string; options: any
       path,
       methodName: propertyKey,
       options,
+      config,
     })
     Reflect.defineMetadata('routes', routes, target.constructor)
   }
 }
 
-export const deleteMapping = ({ path, options = {} } : { path: string; options: any; }): MethodDecorator => {
+export const deleteMapping = ({ path, options = {}, config = {} } : { path: string; options: any; config : any }): MethodDecorator => {
   return (target, propertyKey: string): void => {
     if (!Reflect.hasMetadata('routes', target.constructor)) {
       Reflect.defineMetadata('routes', [], target.constructor)
@@ -68,6 +71,7 @@ export const deleteMapping = ({ path, options = {} } : { path: string; options: 
       path,
       methodName: propertyKey,
       options,
+      config,
     })
     Reflect.defineMetadata('routes', routes, target.constructor)
   }
